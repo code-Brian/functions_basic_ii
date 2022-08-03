@@ -75,6 +75,12 @@ print(values_greater_than_second([5,2,3,2,1,4]))
 # define a function which takes the params size and value
 def length_and_value(size,value):
     # create a variable to store our list
+    value_list = []
     # create a for loop which is inclusive range from the size param/arg
+    for i in range(size + 1):
         # add the value to our values list
+        value_list.append(value)
     #return the values list at the end of function
+    return value_list
+
+print(length_and_value(6,2))
