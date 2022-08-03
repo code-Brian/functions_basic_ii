@@ -39,10 +39,33 @@ print(first_plus_length([1,2,3,5,6,7,8,9,10,11,12,13]))
     # Example: values_greater_than_second([3]) should return False
 
 # define function which uses list as param
+def values_greater_than_second(list):
     # create a new list which will contain our return values
+    greater_than_second = []
+    greater_total = 0
     # create a variable to store the second value of the arg list which gets passed in
-    # check the length of incoming list to make sure it's greater than 2
-        # if list length is 2 or less, return False
-    # check each index of the list to see if it's greater than the 2nd value of the list
-        # if value is greater, add it to a new list
-    # if value is less, ignore that value
+    x = list[1]
+    # iterate through the incoming list and check each value
+    for i in range(len(list)):
+        # check the length of incoming list to make sure it's greater than 2
+        if len(list) < 2:
+            # if list length is 2 or less, return False
+            return False
+        # check each index of the list to see if it's greater than the 2nd value of the list
+        elif list[i] > list[1]:
+            # if value is greater, add it to a new list
+            greater_than_second.append(list[i])
+            # iterate on count of how many values are greater than 2nd index
+            greater_total += 1
+        # if value is less, ignore that value
+        else: 
+            continue
+    # print the total values greater than 2nd index
+    print(f"The amount of indexes greater than 2nd index is: {greater_total}")
+    # return the new list of values greater than 2nd index
+    return greater_than_second
+
+print(values_greater_than_second([5,2,3,2,1,4]))
+
+
+
