@@ -67,5 +67,14 @@ def values_greater_than_second(list):
 
 print(values_greater_than_second([5,2,3,2,1,4]))
 
+# This Length, That Value - accepts two ints as params: size and value
+# the function should create and return a list whose length is equal to the given size, and whose values are all the given value.
+    # Example: length_and_value(4,7) should return [7,7,7,7]
+    # Example: length_and_value(6,2) should return [2,2,2,2,2,2]
 
-
+# define a function which takes the params size and value
+def length_and_value(size,value):
+    # create a variable to store our list
+    # create a for loop which is inclusive range from the size param/arg
+        # add the value to our values list
+    #return the values list at the end of function
